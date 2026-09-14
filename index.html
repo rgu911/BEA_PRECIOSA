@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reproductor de Canción con Efectos Visuales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas para los efectos visuales -->
+  <canvas id="c"></canvas>
+
+  <!-- Reproductor de Audio con Letra -->
+  <div class="player">
+    <audio id="audio" controls>
+      <source src="a_vos.mp3" type="audio/mp3">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Letra de la Canción -->
+    <div id="lyrics" class="lyrics">
+      <p>Letra de la canción aparecerá aquí...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

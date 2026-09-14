@@ -1,0 +1,94 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Estilos del canvas para el efecto de letras */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Estilos del reproductor de audio */
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+/* Estilos del control de audio */
+audio {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Estilos de la letra con neón */
+.lyrics {
+    margin-top: 30px;
+    font-size: 22px;
+    text-align: center;
+    color: #888888;
+    padding: 15px;
+    max-height: 220px;
+    overflow-y: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Letras normales con leve resplandor */
+.lyrics p {
+    margin: 5px 0;
+    padding: 5px 0;
+    font-weight: 300;
+    opacity: 0.5;
+    transition: color 0.3s, text-shadow 0.3s, opacity 0.3s, transform 0.2s;
+}
+
+/* Línea activa con neón FUERTE y animación */
+/* Resalta la letra activa */
+.lyrics p.active {
+    font-weight: bold;
+    color: #1DB954; /* Color verde de Spotify */
+    text-shadow: 0 0 10px #1DB954, 0 0 20px #1DB954; /* Efecto de resplandor */
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+/* Animación para un efecto de pulso en la letra activa */
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0px 0px 10px #00ffcc, 
+            0px 0px 20px #00ffcc, 
+            0px 0px 40px rgba(0, 255, 204, 0.9), 
+            0px 0px 80px rgba(0, 255, 204, 0.7);
+    }
+    100% {
+        text-shadow: 
+            0px 0px 15px #00ffcc, 
+            0px 0px 30px #00ffcc, 
+            0px 0px 50px rgba(0, 255, 204, 1), 
+            0px 0px 100px rgba(0, 255, 204, 0.9);
+    }
+}
